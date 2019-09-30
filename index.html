@@ -22,8 +22,10 @@
 <div id="Tab1" class="tabcontent">
   <h3>1st Chapter</h3>
   <p>This is the 1st chapter content.</p>
-    
-    <h2>Customizing Startup</h2>
+  <h2><a href = "customstart">Customizing Startup</a></h2>
+  <h2><a href = "gethelp">Getting Help</a></h2>
+  
+  <h2><a name = "customstart">Customizing Startup</a></h2>
 
 <p>You can customize the R environment through a site initialization file or a directory initialization file. R will always source the Rprofile.site file first. On Windows, the file is in the C:\Program Files\R\R-n.n.n\etc directory. You can also place a .Rprofile file in any directory that you are going to run R from or in the user home directory.</p>
 
@@ -62,7 +64,27 @@ options(graphics.record=TRUE)
 }
 </code></pre>
         
+  <h2><a name = "gethelp">Getting Help</a></h2>
+  <p>Once R is installed, there is a comprehensive built-in help system. At the program's command prompt you can use any of the following:</p>
+  
+<pre><code>
+help.start()   # general help
+help(foo)      # help about function foo
+?foo           # same thing 
+apropos("foo") # list all functions containing string foo
+example(foo)   # show an example of function foo
 
+# search for foo in help manuals and archived mailing lists
+RSiteSearch("foo")
+
+# get vignettes on using installed packages
+vignette()      # show available vingettes
+vignette("foo") # show specific vignette
+</code></pre>
+
+  <h3>Sample Datasets</h3>
+  <p>R comes with a number of sample datasets that you can experiment with. Type data( ) to see the available datasets. The results will depend on which packages you have loaded. Type help(datasetname) for details on a sample dataset.</p>
+  
 </div>
 
 <div id="Tab2" class="tabcontent">
