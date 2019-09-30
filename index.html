@@ -66,7 +66,7 @@
 
 <p>At startup, R will source the Rprofile.site file. It will then look for a .Rprofile file to source in the current working directory. If it doesn't find it, it will look for one in the user's home directory. There are two special functions you can place in these files. .First( ) will be run at the start of the R session and .Last( ) will be run at the end of the session.</p>
 
-<code>
+<pre>
 # Sample Rprofile.site file 
 
 # Things you might want to change
@@ -97,7 +97,7 @@ options(graphics.record=TRUE)
 .Last <- function(){ 
  cat("\nGoodbye at ", date(), "\n")
 }
-    </code>
+</pre>
         
 
 </div>
