@@ -426,3 +426,86 @@ You can use the boot.sem( ) function to bootstrap the structual equation model. 
 
 For more information on sem, see Structural Equation Modeling with the sem Package in R, by John Fox.
 
+## Correspondence Analysis
+
+Correspondence analysis provides a graphic method of exploring the relationship between variables in a contingency table. There are many options for correspondence analysis in R. I recommend the ca package by Nenadic and Greenacre because it supports supplimentary points, subset analyses, and comprehensive graphics. You can obtain the package here.
+
+Although ca can perform multiple correspondence analysis (more than two categorical variables), only simple correspondence analysis is covered here. See their article for details on multiple CA.
+
+### Simple Correspondence Analysis
+In the following example, A and B are categorical factors.
+
+```
+# Correspondence Analysis
+library(ca)
+mytable <- with(mydata, table(A,B)) # create a 2 way table
+prop.table(mytable, 1) # row percentages
+prop.table(mytable, 2) # column percentages
+fit <- ca(mytable)
+print(fit) # basic results 
+summary(fit) # extended results 
+plot(fit) # symmetric map
+plot(fit, mass = TRUE, contrib = "absolute", map =
+   "rowgreen", arrows = c(FALSE, TRUE)) # asymmetric map
+```
+
+The first graph is the standard symmetric representation of a simple correspondence analysis with rows and column represented by points.
+
+correspondence analysis 1 click to view
+
+Row points (column points) that are closer together have more similar column profiles (row profiles). Keep in mind that you can not interpret the distance between row and column points directly.
+
+The second graph is asymmetric , with rows in the principal coordinates and columns in reconstructions of the standarized residuals. Additionally, mass is represented by points and columns are represented by arrows. Point intensity (shading) corresponds to the absolute contributions for the rows. This example is included to highlight some of the available options.
+
+## Multidimensional Scaling
+
+R provides functions for both classical and nonmetric multidimensional scaling. Assume that we have N objects measured on p numeric variables. We want to represent the distances among the objects in a parsimonious (and visual) way (i.e., a lower k-dimensional space).
+
+### Classical MDS
+You can perform a classical MDS using the cmdscale( ) function.
+
+```
+# Classical MDS
+# N rows (objects) x p columns (variables)
+# each row identified by a unique row name
+
+d <- dist(mydata) # euclidean distances between the rows
+fit <- cmdscale(d,eig=TRUE, k=2) # k is the number of dim
+fit # view results
+
+# plot solution 
+x <- fit$points[,1]
+y <- fit$points[,2]
+plot(x, y, xlab="Coordinate 1", ylab="Coordinate 2", 
+  main="Metric MDS", type="n")
+text(x, y, labels = row.names(mydata), cex=.7)
+```
+
+classical mds click to view
+
+### Nonmetric MDS
+Nonmetric MDS is performed using the isoMDS( ) function in the MASS package.
+
+```
+# Nonmetric MDS
+# N rows (objects) x p columns (variables)
+# each row identified by a unique row name
+
+library(MASS)
+d <- dist(mydata) # euclidean distances between the rows
+fit <- isoMDS(d, k=2) # k is the number of dim
+fit # view results
+
+# plot solution 
+x <- fit$points[,1]
+y <- fit$points[,2]
+plot(x, y, xlab="Coordinate 1", ylab="Coordinate 2", 
+  main="Nonmetric MDS", type="n")
+text(x, y, labels = row.names(mydata), cex=.7)
+```
+
+nonmetric mds click to view
+
+### Individual Difference Scaling
+3-way or individual difference scaling can be completed using the indscal() function in the SensoMineR package. The smacof package offers a three way analysis of individual differences based on stress minimization of means of majorization.
+
