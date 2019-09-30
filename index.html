@@ -60,13 +60,13 @@
 <div id="Tab1" class="tabcontent">
   <h3>1st Chapter</h3>
   <p>This is the 1st chapter content.</p>
-    <p>##Customizing Startup
+    <h2>##Customizing Startup</h2>
 
-You can customize the R environment through a site initialization file or a directory initialization file. R will always source the Rprofile.site file first. On Windows, the file is in the C:\Program Files\R\R-n.n.n\etc directory. You can also place a .Rprofile file in any directory that you are going to run R from or in the user home directory.
+<p>You can customize the R environment through a site initialization file or a directory initialization file. R will always source the Rprofile.site file first. On Windows, the file is in the C:\Program Files\R\R-n.n.n\etc directory. You can also place a .Rprofile file in any directory that you are going to run R from or in the user home directory.</p>
 
-At startup, R will source the Rprofile.site file. It will then look for a .Rprofile file to source in the current working directory. If it doesn't find it, it will look for one in the user's home directory. There are two special functions you can place in these files. .First( ) will be run at the start of the R session and .Last( ) will be run at the end of the session.
+<p>At startup, R will source the Rprofile.site file. It will then look for a .Rprofile file to source in the current working directory. If it doesn't find it, it will look for one in the user's home directory. There are two special functions you can place in these files. .First( ) will be run at the start of the R session and .Last( ) will be run at the end of the session.</p>
 
-```
+<code>
 # Sample Rprofile.site file 
 
 # Things you might want to change
@@ -97,8 +97,8 @@ options(graphics.record=TRUE)
 .Last <- function(){ 
  cat("\nGoodbye at ", date(), "\n")
 }
-```
-        </p>
+    </code>
+        
 
 </div>
 
