@@ -17,7 +17,7 @@ The next line of code adds a regression line to this graph. The final line adds 
 
 plot example click to view
 
-###Saving Graphs
+### Saving Graphs
 You can save the graph in a variety of formats from the menu 
 **File -> Save As.**
 
@@ -34,7 +34,7 @@ postscript("mygraph.ps")	postscript file
 See input/output for details.
 ```
 
-###Viewing Several Graphs
+### Viewing Several Graphs
 Creating a new graph by issuing a high level plotting command (plot, hist, boxplot, etc.) will typically overwrite a previous graph. To avoid this, open a new graph window before creating a new graph. To open a new graph window use one of the functions below.
 
 ```
@@ -48,7 +48,7 @@ You can have multiple graph windows open at one time. See help(dev.cur) for more
 
 Alternatively, after opening the first graph window, choose History -> Recording from the graph window menu. Then you can use Previous and Next to step through the graphs you have created.
 
-###Graphical Parameters
+### Graphical Parameters
 You can specify fonts, colors, line styles, axes, reference lines, etc. by specifying graphical parameters. This allows a wide degree of customization. Graphical parameters, are covered in the Advanced Graphs section. The Advanced Graphs section also includes a more detailed coverage of axis and text customization.
 
 ## Histograms and Density Plots 
