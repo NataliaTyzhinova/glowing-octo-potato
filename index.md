@@ -60,7 +60,7 @@ vignette("foo") # show specific vignette
 ### Sample Datasets
 R comes with a number of sample datasets that you can experiment with. Type data( ) to see the available datasets. The results will depend on which packages you have loaded. Type help(datasetname) for details on a sample dataset.
 
-##The Workspace
+## The Workspace
 
 The workspace is your current R working environment and includes any user-defined objects (vectors, matrices, data frames, lists, functions). At the end of an R session, the user can save an image of the current workspace that is automatically reloaded the next time R is started. Commands are entered interactively at the R user prompt. Up and down arrow keys scroll through your command history. 
 
