@@ -1,3 +1,5 @@
+# R Interface
+
 ## Customizing Startup
 
 You can customize the R environment through a site initialization file or a directory initialization file. R will always source the Rprofile.site file first. On Windows, the file is in the C:\Program Files\R\R-n.n.n\etc directory. You can also place a .Rprofile file in any directory that you are going to run R from or in the user home directory.
