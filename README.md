@@ -14,4 +14,6 @@
 
 ### [Advanced Graphs](https://github.com/nataliatyzhinova/glowing-octo-potato/blob/master/index7.md)
 
+---
+
 from [Quick-R by Datacamp](https://www.statmethods.net/index.html)
