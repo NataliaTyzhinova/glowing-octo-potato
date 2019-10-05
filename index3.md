@@ -1,6 +1,6 @@
-#Data Management
+# Data Management
 
-## Operators ✓
+## Operators 
 
 R's binary and logical operators will look very familiar to programmers. Note that binary operators work on vectors and matrices as well as scalars.
 
@@ -232,7 +232,7 @@ y <- cut(x, 5)
 
 Note that while the examples on this page apply functions to individual variables, many can be applied to vectors and matrices as well.
 
-## User-defined Functions ✓
+## User-defined Functions 
 
 One of the great strengths of R is the user's ability to add functions. In fact, many of the functions in R are actually functions of functions. The structure of a function is given below.
 
@@ -284,7 +284,7 @@ It can be instructive to look at the code of a function. In R, you can view a fu
 
 Finally, you may want to store your own functions, and have them available in every session. You can customize the R environment to load your functions at start-up.
 
-## Control Structures ✓
+## Control Structures 
 
 R has the standard control structures you would expect. expr can be multiple (compound) statements by enclosing them in braces { }. It is more efficient to use built-in functions rather than control structures whenever possible.
 
@@ -552,7 +552,7 @@ Use the sample( ) function to take a random sample of size n from a dataset.
 mysample <- mydata[sample(1:nrow(mydata), 50,
    replace=FALSE),]
 ```
-## Data Type Convertion ✓
+## Data Type Convertion 
 
 Type conversions in R work as you would expect. For example, adding a character string to a numeric vector converts all the elements in the vector to character.
 
