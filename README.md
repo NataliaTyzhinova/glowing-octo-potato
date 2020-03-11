@@ -1,6 +1,6 @@
 # R tutorial
 
-### [R interface](https://github.com/nataliatyzhinova/glowing-octo-potato/blob/master/index.md)
+### [R interface](https://github.com/nataliatyzhinova/glowing-octo-potato/blob/master/index1.md)
 
 ### [Data Input](https://github.com/nataliatyzhinova/glowing-octo-potato/blob/master/index2.md)
 
